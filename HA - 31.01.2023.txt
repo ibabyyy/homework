@@ -1,0 +1,46 @@
+Aufgabe 1
+
+eine laufzeitumgebung wird benutzt damit man nicht jedes programm an das jeweilige
+betriebssystem anpassen muss. eine laufzeitumgebung ist also quasi ein eigenes kleines
+betriebssystem, welches so gebaut ist dass es mit allen andere betriebssystemen auf den
+rechnern kompatibel ist. dadurch kann jedes programm problemlos auf egal was für einem rechner
+ausgeführt werden.
+C# , C++ , Python, Javaskript brauchen eine Lufzeitumgebung.
+ich habe keine ahnung welche sprache keine laufzeitumgebung braucht...google sagt Delphi
+
+
+Aufgabe2
+
+client-server-architektur beschreibt den aufbau eines netzwerks, indem der client als "Kunde" auf den
+"service" des server zugreift. der client stellt eine anfrage an den server, und der server antwortet
+darauf mit einem response.
+Node.js wird genutzt um den server auf simple weise zu einem http server konfigurieren
+
+
+Aufgabe3
+
+node.js wird in der laufzeitumgebung V8 ausgeführt.
+Frage an TA: node.js ist eine laufzeitumgebung und braucht selbst auch eine laufzeitumgebung?????
+
+
+Aufgabe4
+
+anwendungsfall für node.js -
+im backend daten entgegennehmen und auf eine DB speichern. ohne node.js
+wäre das per javascript nicht möglich, weil javascript nur im browser läuft udn net auf eine DB
+zugreifen kann die in deinem keller steht oder sonst wo
+
+kein anwendungsfall -
+da node.js eine single thread event loop architektur verwendet, macht es keinen sinn node.js
+bei der verarbeitung von datenintesiven aufgaben zu nutzen. (cpu-intensive-operationen)
+
+
+Aufgabe 5
+
+node.js switch zwischen threads hin und her.
+der vorteil - geringerer verbrauch von systemresourcen (effizienz)
+nachteil - durch das switchen entsteht ein overhead, je mehr context-switching betrieben wird,
+desto höher ist die warscheinlichkeit, dass nicht genug cpu-cache für die aktuellen threads
+da ist. deshalb werden die daten beim wechsel aus dem hauptspeicher geladen und später
+wieder zurückgeschrieben. das ist ein zeitlicher mehraufwand deswegen ist node.js 
+vergleichsweise lahm und braucht mehr speicher.
