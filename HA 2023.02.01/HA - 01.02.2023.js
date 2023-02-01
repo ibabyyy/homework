@@ -49,7 +49,7 @@ console.log(Checknumber(d))
 
 const g = 101
 const k = 55
-function CheckIfNumberBetween(g) {
+function CheckIfNumberBetween(g, k) {
     if (g>=50 && g<=99 || k>=50 && k<=99) {
     return ("true")
     }
@@ -58,7 +58,7 @@ function CheckIfNumberBetween(g) {
     }
 }
 
-console.log(CheckIfNumberBetween(g))
+console.log(CheckIfNumberBetween(g, k))
 
 //5. Schreiben Sie ein JavaScript-Programm, um jedes n-te Element in einem gegebenen Array zu erhalten
 
