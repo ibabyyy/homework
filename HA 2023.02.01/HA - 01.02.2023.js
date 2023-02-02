@@ -74,6 +74,52 @@ console.log(every_nth(array, nth))
 
 //6. Schreiben Sie ein JavaScript-Programm, um herauszufinden,
 //ob ein Wort ein Palindrom ist, oder nicht. (z. B. Madam, Anna, Otto)
+//hab hier lange rumprobiert aber es klappt noch net ganz
+const text = "Anna";
+
+//const myArray = text.split("")
+//console.log(myArray)
+//const myArray2 = text.reverse()
+//console.log(myArray2)
+
+//const myArray2 = myArray
+//myArray2.reverse()
+
+//const testarray = [1, 2, 3, 4, 5]
+//console.log(testarray.reverse())
+
+var test1 = [1, 2, 3]
+var test2 = [1, 2, 3]
+
+if (test1 === test2){
+    if (true) {
+        return console.log(" is a palindrom")
+    }
+    }
+    else {
+        console.log(" is not a palindrom")
+    }
+   
+
+function palindrom(text) {
+    var lowertext = text.toLowerCase()
+    var splitword = lowertext.split("")
+    var splitwordreverse = Object.values(splitword);
+    splitwordreverse.reverse()
+    //splitwordreverse[0] = 'c'
+    console.log(splitword)
+    console.log(splitwordreverse)
+    if (splitword === splitwordreverse){
+        if (true) {
+        return console.log(" is a palindrom")
+    }
+    }
+    else {
+        console.log(" is not a palindrom")
+    }
+}
+
+console.log(palindrom(text))
 
 //7. Schreiben Sie eine JavaScript-Funktion, die alle Kombinationen eines Strings generiert.
 //Example string: 'dog'; Expected Output: d,o,do,g,dg,og,dog.
