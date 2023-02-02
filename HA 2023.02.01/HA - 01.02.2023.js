@@ -62,10 +62,70 @@ console.log(CheckIfNumberBetween(g, k))
 
 //5. Schreiben Sie ein JavaScript-Programm, um jedes n-te Element in einem gegebenen Array zu erhalten
 
-//.filter
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var nth = 4
 
+const every_nth = (array, nth) => array.filter((e, i) => {
+    return i % nth === nth - 1
+});
 
+console.log(every_nth(array, nth))
 
 
 //6. Schreiben Sie ein JavaScript-Programm, um herauszufinden,
 //ob ein Wort ein Palindrom ist, oder nicht. (z. B. Madam, Anna, Otto)
+
+//7. Schreiben Sie eine JavaScript-Funktion, die alle Kombinationen eines Strings generiert.
+//Example string: 'dog'; Expected Output: d,o,do,g,dg,og,dog.
+
+//8. Schreiben Sie ein JavaScript-Programm, um die nicht eindeutigen Werte in einem Array herauszufiltern.
+// (Beispiel-Array: [1, 2, 2, 3, 4, 4, 5]).
+// hab lange rumprobiert ohen erfolg, dann hab ich gegoogelt und den code für mich angepasst.
+const arraytwo = [ 5, 3, 4, 2, 3, 7, 5, 6 ];
+ 
+const findDuplicates = arraytwo => {
+    return arraytwo.filter((item, index) => {
+        return arraytwo.indexOf(item) !== index;
+    });
+}
+const duplicates = findDuplicates(arraytwo);
+console.log(duplicates);
+
+//9. Schreiben Sie eine JavaScript-Funktion, um das erste Element eines Arrays abzurufen.
+// Das Übergeben eines Parameters 'n' gibt die ersten 'n' Elemente des Arrays zurück.
+//Test Data :
+//console.log(first([7, 9, 0, -2]));
+//console.log(first([],3));
+//console.log(first([7, 9, 0, -2],3));
+//console.log(first([7, 9, 0, -2],6));
+//console.log(first([7, 9, 0, -2],-3));
+
+//Expected Output :
+//7
+//[]
+//[7, 9, 0]
+//[7, 9, 0, -2]
+//[]
+
+//10. Schreiben Sie ein JavaScript-Programm, um ein Array zu mischen.
+// hab ich auch net hinbekommen hab nen code dann genommen und wollte den irgendwie anpassen,
+//dass es zumindest geht aber ging net
+var arrayz = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+var ausgabe = arrayz.join(", ");
+
+
+
+class arrayShuffle {
+    constructor() {
+        var tmp, rand;
+        for (var i = 0; i < this.length; i++) {
+            rand = Math.floor(Math.random() * this.length);
+            tmp = this[i];
+            this[i] = this[rand];
+            this[rand] = tmp;
+        }
+    }
+}
+  
+  Array.prototype.arrayz =arrayShuffle;
