@@ -1,0 +1,43 @@
+1. Identifizieren Sie für jeden der folgenden Befehle, ob er zum Debian-Paketverwaltungssystem
+oder zum Red Hat-Paketverwaltungssystem gehört:
+
+dpkg - debian
+rpm - redhat
+apt-get - debian
+yum - redhat
+dnf - redhat
+
+2.Welcher Befehl könnte verwendet werden, um Blender auf Ubuntu zu installieren? Wie kann
+das Programm nach der Installation ausgeführt werden?
+
+installieren : -apt install blender
+ausführen : blender
+
+3.Welche Anwendung aus der LibreOffice Suite dient der elektronischen Tabellenkalkulation?
+
+libre office calc
+
+4.Welcher Open-Source-Webbrowser bildet die Grundlage für die Entwicklung von Google
+Chrome?
+
+chromium
+
+5.SVG ist ein offener Standard für Vektorgrafiken. Welche ist die beliebteste Anwendung zum
+Bearbeiten von SVG-Dateien in Linux-Systemen?
+
+inkscape
+
+6.Schreiben Sie für jedes der folgenden Dateiformate den Namen einer Anwendung, die die
+entsprechende Datei öffnen und bearbeiten kann:
+
+png - paint xD / inkscape
+doc - libre office writer
+xls - libre office calc
+ppt - power point
+wav - vlc
+
+
+7. Welches Softwarepaket ermöglicht den Dateiaustausch zwischen Linux- und Windows-
+Rechnern über das lokale Netzwerk?
+
+samba
