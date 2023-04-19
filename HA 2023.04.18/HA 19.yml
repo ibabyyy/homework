@@ -1,0 +1,77 @@
+HA 19.04
+
+1. Nutzen Sie den Befehl man, um herauszufinden, was die folgenden Befehle bewirken:
+
+ls - zeigt inhtalt eines verzeichnisses
+cat - strg+x / ausschneiden
+cut - was entfernen aus datei
+cd - duch ordner navigieren
+cp - str+c / kopieren
+mv - datei verschieben
+mkdir - neuen ordner erstellen
+touch - erstellt textdatei
+wc - wörter zählen einer datei
+passwd - passwort ändern    
+rm - datei löschen
+rmdir - verzeichnis löschen (geht nur wenn leer)
+more - zeigt dateiinhalt an komplett
+less - zeigt dateininhalt stückweise
+whereis - zeigt den pfad zu datei
+head - zeigt den anfang von datei
+tail - zeigt das ende von datei
+sort - datei sortieren  
+tr - Der Befehl tr (von translate = umwandeln oder transliterate = transliterieren) dient dazu, in Texten systematisch Zeichen durch andere Zeichen zu ersetzen.
+chmod - änder die permissions für datei
+grep - suche in einer dateo
+
+
+2.Öffnen Sie die Info-Seite von ls und finden Sie das MENU.
+◦ Welche Optionen haben Sie?
+
+which files are listed:
+what information is listed:
+sorting the output:
+general output formatting:
+formatting file timestamps:
+formatting the file name:
+
+◦ Finden Sie die Option, mit der Sie die Ausgabe nach dem Zeitpunkt der letzten Änderung sortieren
+
+-t --sort=time
+
+sort—time'
+Sort by modification timestamp (mttme) by default,
+The timestamp to order by can be changed with the
+*Note File timestamps: : .
+newest first.
+• - -ttme' optton.
+
+
+
+3. Zeigen Sie den Pfad zu den ersten 3 README-Dateien. Verwenden Sie den Befehl man, um die
+richtige Option für locate zu ermitteln.
+
+$ locate -l 3 README
+/etc/alternatives/README
+/etc/init.d/README
+/etc/rc0.d/README
+
+
+4. Erstellen Sie eine Datei namens test in Ihrem Home-Verzeichnis und finden Sie deren
+absoluten Pfad mit dem Befehl locate.
+
+$ touch test
+$ locate test
+/home/user/test
+
+
+5. Haben Sie sie sofort gefunden? Was mussten Sie tun, damit locate sie findet?
+
+sicherstellen dass die datenbank des befehls "locate" aktualisiert ist mit 
+$ sudo updatedb
+
+
+6. Suchen Sie nach der Testdatei, die Sie zuvor erstellt haben, mit dem Befehl find. Welche
+Syntax haben Sie verwendet und wie lautet der absolute Pfad ?
+
+$ find ~ -name test
