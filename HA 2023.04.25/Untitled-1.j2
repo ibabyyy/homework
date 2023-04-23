@@ -1,0 +1,55 @@
+Abgabetermin: 25. Apr., 09:00
+
+1. Gegeben sei die folgende Umgebung. Markieren Sie die Verzeichnisse, die der Befehl mkdir -p
+/tmp/outfiles/text/today /tmp/infiles/text/today erzeugen würde.
+
+$ pwd
+/tmp
+$ find
+.
+./outfiles
+./outfiles/text
+
+/tmp
+/tmp/outfiles
+/tmp/outfiles/text
+/tmp/outfiles/text/today      <--------------------
+/tmp/infiles                  <--------------------
+/tmp/infiles/text             <--------------------
+/tmp/infiles/text/today       <--------------------
+
+
+
+2. Was bewirkt -v bei mkdir, rm und cp?
+
+- es zegt bei allen befehlen an was sie machen während sie es machen
+
+3. Was passiert, wenn Sie versehentlich versuchen, drei Dateien auf der gleichen Befehlszeile in
+eine bereits vorhandene Datei zu kopieren anstatt in ein Verzeichnis?
+
+- kommt fehler
+
+4. Was passiert, wenn Sie mit mv ein Verzeichnis in sich selbst verschieben?
+
+- kommt auch fehler
+
+5. Wie würden Sie alle Dateien in Ihrem aktuellen Verzeichnis löschen, die mit old beginnen?
+
+- rm old*
+
+6. Welche der folgenden Dateien würden mit log_[a-z]_201?_*_01.txt übereinstimmen?
+log_3_2017_Jan_01.txt
+log_+_2017_Feb_01.txt
+log_b_2007_Mar_01.txt          
+log_f_201A_Wednesday_01.txt  <-------------------
+
+
+7. Erstellen Sie ein paar Globs, die der folgenden Liste von Dateinamen entsprechen:
+doc100
+doc200
+doc301
+doc401
+
+
+- doc[1-4]
+- doc*
