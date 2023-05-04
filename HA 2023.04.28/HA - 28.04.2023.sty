@@ -1,0 +1,69 @@
+3.2 Lektion 1
+
+1. Listen Sie den Inhalt Ihres aktuellen Verzeichnisses einschließlich Eigentümer und
+Berechtigungen auf und leiten Sie die Ausgabe in eine Datei namens contents.txt in Ihrem
+Heimatverzeichnis um.
+
+ls -l > contents.txt
+
+2. Sortieren Sie den Inhalt der Datei contents.txt aus Ihrem aktuellen Verzeichnis und fügen
+Sie ihn an das Ende einer neuen Datei namens contents-sorted.txt an.
+
+sort contents.txt >> contents-sorted.txt 
+
+3. Zeigen Sie die letzten 10 Zeilen der Datei /etc/passwd an und leiten Sie sie in eine neue Datei
+im Verzeichnis Documents Ihres Benutzers um.
+
+tail -n10 /etc/passwd > ~/documents/neue_datei.txt 
+
+4. Zählen Sie die Anzahl der Wörter in der Datei contents.txt und hängen Sie die Ausgabe an
+das Ende einer Datei field2.txt in Ihrem Heimatverzeichnis an. Sie müssen sowohl die
+Eingabe- als auch die Ausgabeumleitung verwenden.
+
+wc -w contents.txt >> ~/field2.txt
+
+5. Zeigen Sie die ersten 5 Zeilen der Datei /etc/passwd an und sortieren Sie die Ausgabe
+alphabetisch umgekehrt.
+
+head -n 5 /etc/passwd | sort -r
+
+6. Zählen Sie mit der zuvor erstellten Datei contents.txt die Anzahl der Zeichen der letzten 9
+Zeilen.
+
+tail -n 9 contents.txt | wc -c
+
+7. Zählen Sie die Anzahl der Dateien namens test im Verzeichnis /usr/share und dessen
+Unterverzeichnissen. Hinweis: Jede Zeilenausgabe des Befehls find steht für eine Datei.
+
+find /usr/share -name test | wc -l
+
+
+
+3.2 Lektion 2
+
+Suchen Sie mit grep in der Datei /usr/share/hunspell/en_US.dic die Zeilen, die den
+folgenden Kriterien entsprechen:
+
+1. Alle Zeilen, die die Zeichenfolge cat an beliebiger Stelle in der Zeile enthalten.
+
+grep "cat" /usr/share/hunspell/en_US.dic
+
+2. Alle Zeilen, die keines der folgenden Zeichen enthalten: sawgtfixk.
+
+grep -v "[sawgtfixk]" /usr/share/hunspell/en_US.dic
+
+3. Alle Zeilen, die mit 3 beliebigen Buchstaben und der Zeichenfolge dig beginnen.
+
+grep "^...dig" /usr/share/hunspell/en_US.dic
+
+4. Alle Zeilen, die mit mindestens einem e enden.
+
+grep -E "e+$" /usr/share/hunspell/en_US.dic
+
+5. Alle Zeilen, die eine der folgenden Zeichenfolgen enthalten: org, kay oder tuna.
+
+grep -E "org|kay|tuna" /usr/share/hunspell/en_US.dic
+
+6. Anzahl der Zeilen, die mit einem oder keinem c beginnen, gefolgt von der Zeichenkette ati.
+
+grep -cE "^c?ati" /usr/share/hunspell/en_US.dic
