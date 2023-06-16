@@ -1,0 +1,19 @@
+import json
+import time
+import boto3
+s3 = boto3.client('s3')
+
+def lambda_handler(event, context):
+        bucketA_name = event['Records'][0]['s3']['bucket']['name']
+        file_key = event['Records'][0]['s3']['object']['key']
+        timestr = time.strftime("%Y"+"_"+"%m"+"_"+"%d"+"_"+"%H" +"_"+"%M")
+        timenew = time.strftime("%H" +"_"+"%M")
+        print(event)
+        #print(bucketA_name)
+        #print(file_key)
+        message = "Im Bucket A wurde eine Datei namens "+ file_key+" angelegt zum Zeitpunkt "+ timenew
+
+        # Create a new text file in Bucket B
+        bucketB_name = 'bucketbeta1'
+        new_file_name = f"{timenew}.txt"
+        s3.put_object(Bucket=bucketB_name, Key=new_file_name, Body=message)
