@@ -1,0 +1,21 @@
+import boto3
+
+def lambda_handler(event, context):
+    message = event['Records'][0]['body']
+    s3 = boto3.resource('s3')
+    bucket_name = 'adadadadada1'
+    file_name = 'nachricht.txt'
+    s3.Object(bucket_name, file_name).put(Body=message)
+
+
+
+aufgabe 2
+
+import boto3
+
+def lambda_handler(event, context):
+message = event['Records'][0]['Sns']['Message']
+s3 = boto3.resource('s3')
+bucket_name = 'adadadadada1'
+file_name = 'nachricht.txt'
+s3.Object(bucket_name, file_name).put(Body=message)
